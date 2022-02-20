@@ -1,3 +1,4 @@
+//STOCK MARKET PORTFOLIO APP BY PB
 // CTRL+C = Terminal break
 
 //1. EXPRESS - require express, initialize it
