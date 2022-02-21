@@ -20,13 +20,11 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT);
 console.log("Server listening on port: " + PORT);
 
-
 //MIDDLEWARE
 //4.2 HANDLEBARS - set handlebars middleware
 app.engine("handlebars", exphbs.engine()); //instantiates the engine "handlebars"
 app.set("view engine","handlebars"); //sets the engine handlebars as the view-engine
 app.set("views", "./views");
-
 
 const otherstuff = "hello there, this is other stuff";
 
@@ -36,6 +34,14 @@ app.get("/", function(req, res)
 {
 	res.render("home", {stuff: otherstuff});
 });
+
+//5. create about page route
+app.get("/about.html", function(req, res)
+{
+   res.render("about");
+});
+
+
 
 //***STATIC SYSTEM***
 //3.1 STATIC ROUTING - Set static routing (public folder)
